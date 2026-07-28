@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jakarta.variable}`}>
-      <body className="min-h-screen bg-[#F7F1DE] text-[#2D2A26]">
+      <body className="min-h-screen">
         {children}
       </body>
     </html>
