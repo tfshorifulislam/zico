@@ -2,7 +2,12 @@
 
 :root {
   /* Colors */
-  --background: #391e5c;
+  --background: linear-gradient(
+    180deg,
+    #200b3b 0%,
+    #190631 100%
+  );
+
   --foreground: #ffffff;
 
   --card: #FFFBEF;
@@ -59,12 +64,17 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(
+    135deg,
+    #220f3a 0%,
+    #200f36 35%,
+    #26123f 70%,
+    #1c0d30 100%
+  );
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-jakarta), sans-serif;
   min-height: 100vh;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
