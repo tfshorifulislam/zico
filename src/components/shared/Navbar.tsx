@@ -1,8 +1,15 @@
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "../ui/navigation-menu";
 import Link from "next/link";
 import { DropdownMenuAvatar } from "./DropDownMenu";
+import { auth } from "@/app/lib/auth";
+import { headers } from "next/headers";
+import LoginButton from "./LoginButton";
 
-const Navbar = () => {
+const Navbar = async () => {
+
+    const user = await auth.api.getSession({
+        headers: await headers()
+    })
 
     return (
         <header className="sticky top-0 z-50 w-full">
@@ -44,7 +51,7 @@ const Navbar = () => {
 
                 {/* Right: Avatar & Actions */}
                 <div>
-                    <DropdownMenuAvatar />
+                    {user ? <DropdownMenuAvatar /> : <LoginButton />}
                 </div>
 
             </div>
