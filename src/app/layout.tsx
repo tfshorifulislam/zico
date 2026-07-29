@@ -3,6 +3,7 @@ import { Khand, Poppins, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/shared/Navbar";
+import { ToastContainer } from "react-toastify";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body className="min-h-screen">
         <Navbar/>
         {children}
+        <ToastContainer />
       </body>
     </html>
   );
