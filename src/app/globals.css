@@ -66,10 +66,10 @@ html {
 body {
   background: linear-gradient(
     135deg,
-    #220f3a 0%,
-    #200f36 35%,
-    #26123f 70%,
-    #1c0d30 100%
+    #120327 0%,
+    #1d0a36 35%,
+    #260e42 70%,
+    #120327 100%
   );
   background-attachment: fixed;
   color: var(--foreground);
