@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Khand, Poppins, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/shared/Navbar";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -58,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(poppins.className, khand.variable, "font-sans", geist.variable)}>
       <body className="min-h-screen">
+        <Navbar/>
         {children}
       </body>
     </html>
